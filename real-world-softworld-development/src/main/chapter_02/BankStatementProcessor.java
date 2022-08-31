@@ -1,5 +1,8 @@
 package main.chapter_02;
 
+import main.chapter_03.BankTransactionFilter;
+import main.chapter_03.BankTransactionSummarizer;
+
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,5 +41,33 @@ public class BankStatementProcessor {
             }
         }
         return total;
+   }
+
+   public List<BankTransaction> findTransactionsGreaterThanEqual(final int amount) {
+        final List<BankTransaction> result = new ArrayList<>();
+        for (final BankTransaction bankTransaction : bankTransactions) {
+            if(bankTransaction.getAmount() >= amount) {
+                result.add(bankTransaction);
+            }
+        }
+        return result;
+   }
+
+   public List<BankTransaction> findTransactions(final BankTransactionFilter bankTransactionFilter) {
+        final List<BankTransaction> result = new ArrayList<>();
+       for (final BankTransaction bankTransaction : bankTransactions) {
+           if(bankTransactionFilter.test(bankTransaction)) {
+               result.add(bankTransaction);
+           }
+       }
+       return result;
+   }
+
+   public double summarizeTransactions(final BankTransactionSummarizer bankTransactionSummarizer) {
+        double result = 0;
+       for (BankTransaction bankTransaction : bankTransactions) {
+           result = bankTransactionSummarizer.summarize(result, bankTransaction);
+       }
+       return result;
    }
 }
