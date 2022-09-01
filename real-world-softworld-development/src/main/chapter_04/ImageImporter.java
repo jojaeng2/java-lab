@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,4 +25,5 @@ public class ImageImporter implements Importer{
 
         return new Document(attributes);
     }
+
 }
