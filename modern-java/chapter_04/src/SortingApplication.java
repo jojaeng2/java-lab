@@ -7,10 +7,10 @@ public class SortingApplication {
 
     public static void main(String[] args) {
         List<Dish> menu = new ArrayList<>();
-        for(int i=0; i<10; i++) {
-            Dish dish = new Dish(i*100, "Name" + i);
-            menu.add(dish);
-        }
+//        for(int i=0; i<10; i++) {
+//            Dish dish = new Dish(i*100, "Name" + i);
+//            menu.add(dish);
+//        }
         List<Dish> lowCaloricDishes = new ArrayList<>();
 
         for (Dish dish : menu) {

@@ -13,10 +13,10 @@ public class NewSortingApplication {
 
 
         List<Dish> menu = new ArrayList<>();
-        for(int i=0; i<10000; i++) {
-            Dish dish = new Dish(i*100, "Name" + i);
-            menu.add(dish);
-        }
+//        for(int i=0; i<10000; i++) {
+//            Dish dish = new Dish(i*100, "Name" + i);
+//            menu.add(dish);
+//        }
 
         List<String> lowCaloricDishesName = menu.parallelStream()
                 .filter(d -> d.getCalories() < 400)
