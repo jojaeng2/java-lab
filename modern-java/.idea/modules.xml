@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chapter1_2/chapter1_2.iml" filepath="$PROJECT_DIR$/chapter1_2/chapter1_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter_03/chapter_03.iml" filepath="$PROJECT_DIR$/chapter_03/chapter_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter_04/chapter_04.iml" filepath="$PROJECT_DIR$/chapter_04/chapter_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modern-java.iml" filepath="$PROJECT_DIR$/.idea/modern-java.iml" />
+    </modules>
+  </component>
+</project>
