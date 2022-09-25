@@ -56,6 +56,15 @@ public class Grouping {
         // {MEAT=3, OTHER=4, FISH=2}
 
         Map<Dish.Type, Optional<Dish>> mostCaloricByType = menu.stream()
-                .collect(groupingBy(Dish::getType, maxBy(Comparator.comparing(Dish::getCalories))))
+                .collect(groupingBy(Dish::getType, maxBy(Comparator.comparing(Dish::getCalories))));
+
+
+        Map<Boolean, Map<Dish.Type, List<Dish>>> vegetarianDishesByType = menu.stream()
+                .collect(partitioningBy(Dish::isVegetarian, groupingBy(Dish::getType)));
+
+        Map<Boolean, Dish> mostCaloricPartitionedByVegetarian = menu.stream().collect(
+                partitioningBy(Dish::isVegetarian, collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)), Optional::get)));
+
+        
     }
 }
