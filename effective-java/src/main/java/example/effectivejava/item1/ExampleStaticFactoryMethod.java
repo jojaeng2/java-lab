@@ -5,19 +5,18 @@ import java.util.EnumSet;
 
 public class ExampleStaticFactoryMethod {
 
-    public static void main(String[] args) {
-        Users user1 = Users.userWithAddress(26, "jo", "Busan");
-        Users user2 = Users.userWithEmail(26, "jo", "ds4ouj@naver.com");
-
-        Users member = Users.getUserClass(26, "jo", "Busan", "ds4ouj@naver.com");
-        System.out.println("member = " + member.getClass());
-        Users member2 = Users.getUserClass(26, "jaeng", "Busan", "ds4ouj@naver.com");
-        System.out.println("member = " + member2.getClass());
-
-    }
+//    public static void main(String[] args) {
+//        Users user1 = Users.userWithAddress(26, "jo", "Busan");
+//        Users user2 = Users.userWithEmail(26, "jo", "ds4ouj@naver.com");
+//
+//        Users member = Users.getUserClass(26, "jo", "Busan", "ds4ouj@naver.com");
+//        System.out.println("member = " + member.getClass());
+//        Users member2 = Users.getUserClass(26, "jaeng", "Busan", "ds4ouj@naver.com");
+//        System.out.println("member = " + member2.getClass());
+//
+//    }
 
     public static class Users {
-        Connection
         private int age;
         private String name;
         private String address;
