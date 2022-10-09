@@ -1,10 +1,10 @@
-package example.benchmark;
+package example.effectivejava;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BenchmarkApplicationTests {
+class EffectiveJavaApplicationTests {
 
 	@Test
 	void contextLoads() {
