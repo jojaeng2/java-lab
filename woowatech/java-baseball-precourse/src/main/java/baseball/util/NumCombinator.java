@@ -21,6 +21,6 @@ public class NumCombinator {
     }
 
     private boolean isSelectedEnd() {
-        return this.numbers.size() == 3;
+        return numbers.size() == 3;
     }
 }
