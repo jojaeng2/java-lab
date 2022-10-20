@@ -2,25 +2,33 @@ package baseball.util;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class NumCombinator {
-    private final Set<Integer> numbers = new HashSet<>();
+    private final List<Integer> numbers;
 
-    private NumCombinator() {
-
+    public NumCombinator() {
+        this.numbers = new ArrayList<>();
     }
 
-    public Set<Integer> selectNumbers() {
+    public List<Integer> selectNumbers() {
         while(isSelectedEnd()) {
-            int number = Randoms.pickNumberInRange(1, 9);
-            numbers.add(number);
+            Integer number = Randoms.pickNumberInRange(1, 9);
+            if(isSelectedBefore(number)) {
+                numbers.add(number);
+            }
         }
-        return this.numbers;
+        return numbers;
     }
 
     private boolean isSelectedEnd() {
         return numbers.size() == 3;
+    }
+
+    private boolean isSelectedBefore(Integer number) {
+        return numbers.contains(number);
     }
 }
